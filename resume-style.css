@@ -1,0 +1,23 @@
+body {
+    height: 100%;
+    background-color: bisque;
+    display: grid;
+    grid: 30% 70%;
+    
+}
+
+.main-container {
+    /* display: grid;
+    grid: 30% 70%; */
+}
+
+.col-left {
+    grid-template-columns: 1/2;
+    
+
+
+}
+
+.col-right {
+    grid-template-columns: 2/3;
+}
