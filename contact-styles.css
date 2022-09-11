@@ -12,7 +12,7 @@ header {
   height: 180px;
   display: flex;
   flex-direction: column;
-  background-color: purple;
+  background-color: rgb(252, 184, 184);
   opacity: 0.8;
 }
 header div.logo {
@@ -38,16 +38,18 @@ main {
   display: flex;
 }
 
-main div {
+/* main div. {
   flex: 1;
-}
+} */
 
 main div.left-box {
+  flex: 1;
   padding: 10px;
   margin: 20px;  
   /* background-color: aqua; */
   /* opacity: 0.8; */
 }
+
 div p.email {
   font-family: 'Montserrat', sans-serif;
   font-size: 20pt;
@@ -63,16 +65,17 @@ main img.email {
   margin-right: auto;
 }
 main div.form {
-  /* display: block; */
-  font-family: 'Montserrat', sans-serif;
-  font-size: 8pt;
-  line-height: 25px;
+  flex: 1;
+  font-family: 'Noto Sans Balinese', sans-serif;
+  font-size: 10pt;
   margin: 20px;
+  border: 0px solid black;
+  border-radius: 8px;
+  box-shadow: 5px 5px 8px rgba(252, 184, 184, 0.4);
 }
-/* .Name {
-  display: inline-block;
-  width: 45%;
-} */
+form {
+  margin: 10px 20px;
+}
 .fName {
   float: left;
   width: 225px;
@@ -81,27 +84,42 @@ main div.form {
   float: right;
   width: 225px;
   padding-left: 47px;
-  
 }
 .email {
   clear: both;
+  padding-top: 5px;
 }
-/* input[type=text] {
-  border: none;
-  border-bottom: 2px solid rgba(48, 5, 48);
-} */
 input[type=email] {
   width: 450px;
-  /* border: none;
-  border-bottom: 2px solid rgba(48, 5, 48); */
 }
 .input[type=text], select, textarea {
   width: 450px;
-  
+}
+label {
+  padding-top: 5px;
+  font-weight: bold;
+}
+p {
+  font-weight: bold;
+  margin: 15px 0 0 0;
+}
+.checkbox {
+  line-height: 1.5;
+  font-weight: lighter;
+}
+.check1 {
+  float: left;
+  padding-right: 50px ;
 }
 
-
-
+button {
+  background-color: rgb(252, 184, 184);
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  margin: 10px 0 30px 0;
+  cursor: pointer;
+}
 
 
 /* **********Media Query********* */
@@ -109,5 +127,14 @@ input[type=email] {
   main {
     flex-direction: column;
   }
-  
+  .fName, .lName, input[type=text] , input[type=email],.input[type=text], select, textarea {
+    width: 100%;
+    margin-top: 0;
+  }
+ .lName, input[type=text] {
+  padding-left: 0;
+ }
+ button {
+    width: 100%;
+ }
 }
