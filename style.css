@@ -1,12 +1,11 @@
-body {
+/* body {
     font-family: Arial, Helvetica, sans-serif;
     background-image: url(https://png.pngtree.com/thumb_back/fh260/back_pic/00/15/30/4656e81f6dc57c5.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgba(170, 152, 252, 0.555);
   }
-  /* What kind of selector is this? */
-  
+ 
   .logo {
     width: 100px;
     height: 100px;
@@ -17,21 +16,59 @@ body {
     display: grid;
     grid-template-columns: 40% 60%;
     width: 100%;
+  } */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-
-  main {
-   /* height: auto;
-    width: 60%;
-    display: grid;
-    grid-template-columns: 30% 40% 30%;*/
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%
-  }
-
-  /* This is an element within and element selector */ 
-  nav > a {
+  
+ body {
+   margin: 0;
+   height: 100vh;
+ }
+ 
+header {
+   height: 80px;
+   display: flex;
+   width: 100%;
+   background: #30241a;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0 100px;
+   flex-wrap: wrap;
+}
+ /* header div.logo {
+   flex:1;
+   padding: 20px;
+ } */
+header img {
+   width: 100px;
+   height: 85px;
+}
+nav ul {
+  font-family: 'Noto Sans Balinese', sans-serif;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+nav a {
+  text-decoration: none;
+  color: #ffecd1;
+  padding: 8px 18px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+}
+nav ul li a:hover{
+  color: #ffecd1;
+  background: #Ff7d00;
+}
+  /* nav > a {
     margin: 8% 3% 5%;
     height: 12%;
     width: 15%;
@@ -44,9 +81,9 @@ body {
     text-align: center;
     border: 2px solid white;
     text-decoration: none;
-  }
+  } */
 
-  .has-border {
+  /* .has-border {
     border-radius: 10px;
     border: 2px solid #fa9333;
     background-color: rgb(252, 184, 184);
@@ -58,70 +95,71 @@ body {
     justify-content: flex-end;
     width: 100%;
     padding-right: 2%;
-  }
+  } */
   /* This is an ID selector */
-  #pofolio-pic {
-    display: block;
-    width: 200px;
-    height: 200px;
-    border: 3px solid rgba(94, 50, 253, 0.76);
-    border-radius: 50%;
-    margin-left: auto;
-    margin-right: auto;  
-  }
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1520px;
+  border: 0px solid black;
+  border-radius: 5px;
+  box-shadow: 5px 5px 8px #30241a;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f2f6;
+}
+main {
+  height: calc(100vh - 120px);
+  padding-top: 100px;
+}
+#pofolio-pic {
+  display: block;
+  width: 200px;
+  height: 200px;
+  box-shadow: 8px 5px 10px #27187e;
+  border: 0px solid #aeb8fe;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;  
+ 
+}
+h1 {
+  color:rgb(8, 8, 8);
+  display: block;
+  text-align: center;
+  font-family:'Noto Sans Balinese', sans-serif;
+  font-size: 50pt;
+  color:#Ffecd1;
+  text-shadow: 2px 2px 5px #27187e;
+}
 
-  h1 {
-    color:rgb(8, 8, 8);
-    display: block;
-    /*margin-left: auto;
-    margin-right: auto;*/
-    text-align: center;
-    font-family: 'Michroma', sans-serif;
-    font-size: 3em;
-    text-shadow: 2px 2px 8px rgb(252, 184, 184);
-  }
-
-  h2 {
-    text-align: center;
-    text-decoration: underline;
-    font-size: 1em;
-    font-weight: bold;
-    margin: 25px auto;
-    
-  }
-
-  .small-text {
-    /*text-align: center;
-    color: rgb(68, 48, 248);
-    font-size: 12px;
-    margin: 100px auto;
-    padding: auto;*/
-    margin: 0 auto;
-    text-align: center;
-  }
-
-  button {
-    /*position: absolute;
-    margin: 10px auto;
-    width: 25%;
-    height: 10%;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    border-radius: 25px;
-    background: transparent;
-    padding: 5px;*/
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    width: 100px;
-    border: 3px solid rgb(1, 29, 1);
-    border-radius: 25px; 
-    margin: auto;
-    text-align: center;
-    font-size: 1em;
-    font-weight: bold;
-    color: rgb(71, 2, 2);
-    letter-spacing: 1px;
-    font-style: italic;
-  }
+h2 {
+  font-family: 'Noto Sans Balinese', sans-serif;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 25px auto;
+  
+}
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 100px;
+  border: 1px solid #27187e;
+  border-radius: 5px; 
+  margin: auto;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  color: #Ffecd1;
+  background-color: #aeb8fe;
+  letter-spacing: 1px;
+}
+main a.linkACA{
+  padding: 100px auto;
+  margin: 100px auto;
+  text-align: center;
+}
